@@ -1,25 +1,11 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Orders</title>
+import './header.css';
+import './ordersPage.css';
 
-    <!-- This code is needed for responsive design to work.
-      (Responsive design = make the website look good on
-      smaller screen sizes like a phone or a tablet). -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Load a font called Roboto from Google Fonts. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Here are the CSS files for this page. -->
-    <link rel="stylesheet" href="styles/shared/general.css">
-    <link rel="stylesheet" href="styles/shared/header.css">
-    <link rel="stylesheet" href="styles/pages/orders.css">
-  </head>
-  <body>
-    <div class="header">
+export function OrdersPage(){
+    return(
+        <>
+        <title>OrdersPage</title>
+         <div class="header">
       <div class="left-section">
         <a href="/" class="header-link">
           <img class="logo"
@@ -38,7 +24,7 @@
       </div>
 
       <div class="right-section">
-        <a class="orders-link header-link" href="orders.html">
+        <a class="orders-link header-link" href="/orders">
 
           <span class="orders-text">Orders</span>
         </a>
@@ -49,9 +35,9 @@
           <div class="cart-text">Cart</div>
         </a>
       </div>
-    </div>
+         </div>
 
-    <div class="orders-page">
+         <div class="orders-page">
       <div class="page-title">Your Orders</div>
 
       <div class="orders-grid">
@@ -185,6 +171,7 @@
           </div>
         </div>
       </div>
-    </div>
-  </body>
-</html>
+         </div>
+        </>
+    );
+}
