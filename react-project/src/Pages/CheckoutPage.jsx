@@ -3,6 +3,7 @@ import './checkout-header.css';
 import './checkoutPage.css';
 
 export function CheckoutPage({cart}){
+  //this cart is brought from the app function
     return (
         <>
             <title>Checkout</title>
@@ -112,6 +113,7 @@ export function CheckoutPage({cart}){
             );
           })}
         </div>
+
 
         <div className="payment-summary">
             <div className="payment-summary-title">
