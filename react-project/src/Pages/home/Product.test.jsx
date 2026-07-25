@@ -1,7 +1,7 @@
 import { it, expect, describe, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import { Product } from "./Products.jsx";
+import { Products } from "./Products.jsx";
 
 describe("Product component", () => {
   it("displays the product details", () => {
@@ -20,13 +20,13 @@ describe("Product component", () => {
 
     const loadCart = vi.fn();
 
-    render(<Product product={product} loadCart={loadCart} />);
+    render(<Products product={product} loadCart={loadCart} />);
 
     expect(
       screen.getByText("Adults Plain Cotton T-Shirt - 2 Pack")
     ).toBeInTheDocument();
 
-    /*expect(
-        screen.getByText('Black and Gray Athletic Cotton Socks - 6 Pairs')).toBeInTheDocument(); */
+    expect(
+        screen.getByText('$7.99')).toBeInTheDocument();
   });
 });
