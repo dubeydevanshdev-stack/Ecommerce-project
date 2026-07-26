@@ -28,5 +28,18 @@ describe("Product component", () => {
 
     expect(
         screen.getByText('$7.99')).toBeInTheDocument();
+
+    expect(
+        screen.getByTestId('product-image')
+      ).toHaveAttribute('src','images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg');
+
+    expect(
+      screen.getByTestId('product-rating-stars-image')
+    ).toHaveAttribute('src' , 'images/ratings/rating-45.png');
+
+    expect(
+      screen.getByText('56')
+    ).toBeInTheDocument();
+    
   });
 });
