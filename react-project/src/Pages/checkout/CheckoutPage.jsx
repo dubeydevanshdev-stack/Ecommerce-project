@@ -20,7 +20,7 @@ export function CheckoutPage({cart, loadCart}){
 
 
     useEffect(()=>{
-        axios.get('./api/payment-summary')
+        axios.get('/api/payment-summary')
           .then((response)=>{
             setPaymentSummary(response.data);
           });
